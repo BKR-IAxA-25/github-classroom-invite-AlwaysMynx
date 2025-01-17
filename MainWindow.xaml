@@ -1,0 +1,35 @@
+﻿<Window x:Class="Taschenrechner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Taschenrechner" Height="514" Width="360"
+        KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="Display" FontSize="24" HorizontalAlignment="Stretch" Margin="10" IsReadOnly="True" TextAlignment="Right" VerticalContentAlignment="Center"/>
+        <UniformGrid Grid.Row="1" Rows="5" Columns="4" Margin="10">
+            <!-- Zahlen -->
+            <Button Content="7" Click="Button_Click" Background="LightGray"/>
+            <Button Content="8" Click="Button_Click" Background="LightGray"/>
+            <Button Content="9" Click="Button_Click" Background="LightGray"/>
+            <Button Content="/" Click="Operator_Click" Background="Orange" Foreground="White"/>
+            <Button Content="4" Click="Button_Click" Background="LightGray"/>
+            <Button Content="5" Click="Button_Click" Background="LightGray"/>
+            <Button Content="6" Click="Button_Click" Background="LightGray"/>
+            <Button Content="*" Click="Operator_Click" Background="Orange" Foreground="White"/>
+            <Button Content="1" Click="Button_Click" Background="LightGray"/>
+            <Button Content="2" Click="Button_Click" Background="LightGray"/>
+            <Button Content="3" Click="Button_Click" Background="LightGray"/>
+            <Button Content="-" Click="Operator_Click" Background="Orange" Foreground="White"/>
+            <Button Content="C" Click="Clear_Click" Background="Red" Foreground="White"/>
+            <Button Content="0" Click="Button_Click" Background="LightGray"/>
+            <Button Content="." Click="Button_Click" Background="LightGray"/>
+            <Button Content="+" Click="Operator_Click" Background="Orange" Foreground="White"/>
+            <!-- Löschen und Gleichheitszeichen -->
+            <Button Content="DEL" Click="Delete_Click" Background="Red" Foreground="White"/>
+            <Button Content="=" Click="Equals_Click" Grid.ColumnSpan="3" Background="Green" Foreground="White"/>
+        </UniformGrid>
+    </Grid>
+</Window>
